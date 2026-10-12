@@ -70,7 +70,7 @@ export function About() {
                 fontFamily: "'Playfair Display', serif",
               }}
             >
-              Visual designs that speak for your brand.
+              Digital experiences and visual designs that speak for your brand.
             </h2>
             <p
               style={{
@@ -80,9 +80,7 @@ export function About() {
                 marginBottom: 20,
               }}
             >
-              I'm a passionate graphic designer dedicated to crafting powerful
-              visual identities, advertising graphics, and print media. Every design
-              is crafted with care for color, composition, and message.
+              I am a passionate UI/UX and graphic designer dedicated to crafting intuitive user interfaces and powerful visual identities. Every project is crafted with a deep focus on user experience, color, composition, and messaging.
             </p>
             <p
               style={{
@@ -92,8 +90,7 @@ export function About() {
                 marginBottom: 32,
               }}
             >
-              From commercial product layouts to brand posters, I help
-              businesses stand out in crowded markets with memorable graphics.
+              From seamless app layouts to striking brand graphics, I help businesses stand out with products that are both beautiful to look at and effortless to use.
             </p>
           </div>
 
