@@ -8,7 +8,7 @@ const TYPING_WORDS = [
   "Brand Strategist.",
   "Visual Artist.",
   "Creative Visionary.",
-  "UI/UX Designer",
+  "UI/UX Designer.",
 ];
 
 export function Hero() {
@@ -18,6 +18,7 @@ export function Hero() {
   return (
     <section
       id="hero"
+      className="hero-padding"
       style={{
         width: "100%",
         boxSizing: "border-box",
@@ -26,7 +27,6 @@ export function Hero() {
         display: "flex",
         alignItems: "center",
         background: t.bg,
-        padding: "120px 2rem 60px 2rem",
         position: "relative",
         overflow: "hidden",
       }}
@@ -67,7 +67,7 @@ export function Hero() {
                 fontWeight: 600,
               }}
             >
-              <Palette size={18} /> Creative UI/UX and Visual Designer Studio
+              <Palette size={18} /> Creative UI/UX & Visual Designer Studio
             </p>
             <h1
               style={{
@@ -84,10 +84,10 @@ export function Hero() {
             </h1>
             <div
               style={{
-                height: 52,
+                minHeight: 52,
                 display: "flex",
                 alignItems: "center",
-                marginBottom: 24,
+                marginBottom: 20,
               }}
             >
               <span
@@ -96,6 +96,7 @@ export function Hero() {
                   fontWeight: 600,
                   color: t.accent,
                   fontFamily: "monospace",
+                  wordBreak: "break-word",
                 }}
               >
                 {typed}
@@ -114,7 +115,7 @@ export function Hero() {
                 fontSize: 17,
                 maxWidth: 520,
                 lineHeight: 1.7,
-                margin: "0 0 40px",
+                margin: "0 0 36px",
               }}
             >
               Translating complex user needs into elegant, visually engaging interfaces, UX strategy, UI design, brand identity, and premium graphic design.
@@ -180,9 +181,9 @@ export function Hero() {
             <div
               style={{
                 display: "flex",
-                gap: 36,
-                marginTop: 56,
-                paddingTop: 36,
+                gap: 28,
+                marginTop: 48,
+                paddingTop: 32,
                 borderTop: `1px solid ${t.border}`,
                 flexWrap: "wrap",
               }}
@@ -192,7 +193,7 @@ export function Hero() {
                 ["50+", "Projects Delivered"],
                 ["20+", "Happy Clients"],
               ].map(([num, label]) => (
-                <div key={label}>
+                <div key={label} style={{ minWidth: 100 }}>
                   <div
                     style={{
                       fontSize: 26,
@@ -246,20 +247,21 @@ export function Hero() {
                 }}
               />
             </div>
-            {/* Floating badge */}
+            {/* Floating badge (kept inside container bounds) */}
             <div
               style={{
                 position: "absolute",
-                bottom: 24,
-                left: -12,
+                bottom: 20,
+                left: 16,
                 background: t.surface,
                 border: `1px solid ${t.border}`,
                 borderRadius: 14,
-                padding: "14px 20px",
+                padding: "12px 18px",
                 display: "flex",
                 alignItems: "center",
                 gap: 12,
                 boxShadow: t.cardShadow,
+                maxWidth: "calc(100% - 32px)",
               }}
             >
               <img
@@ -271,20 +273,24 @@ export function Hero() {
                   borderRadius: "50%",
                   objectFit: "cover",
                   border: `1px solid ${t.accent}`,
+                  flexShrink: 0,
                 }}
               />
-              <div>
+              <div style={{ overflow: "hidden" }}>
                 <div
                   style={{
                     color: t.text,
                     fontWeight: 700,
                     fontSize: 13,
+                    whiteSpace: "nowrap",
+                    textOverflow: "ellipsis",
+                    overflow: "hidden",
                   }}
                 >
                   VELLIGRAPHICS
                 </div>
-                <div style={{ color: t.textFaint, fontSize: 11 }}>
-                  Brand • Poster • Digital
+                <div style={{ color: t.textFaint, fontSize: 11, whiteSpace: "nowrap" }}>
+                  Brand • UI/UX • Motion
                 </div>
               </div>
             </div>
@@ -295,4 +301,3 @@ export function Hero() {
     </section>
   );
 }
-

@@ -78,7 +78,7 @@ export function Navbar({ active, isDark, onToggle }) {
             style={{
               fontFamily: "'Playfair Display', serif",
               fontWeight: 900,
-              fontSize: 20,
+              fontSize: "clamp(16px, 4vw, 20px)",
               color: t.accent,
               letterSpacing: "1.5px",
               textTransform: "uppercase",

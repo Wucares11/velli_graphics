@@ -31,18 +31,19 @@ export function About() {
   return (
     <section
       id="about"
+      className="section-padding"
       style={{
         width: "100%",
         boxSizing: "border-box",
         scrollMarginTop: "80px",
         background: t.bgAlt,
-        padding: "100px 2rem",
       }}
     >
       <div
         style={{
           maxWidth: 1200,
           margin: "0 auto",
+          width: "100%",
         }}
       >
         <div className="responsive-grid-2">
@@ -60,16 +61,16 @@ export function About() {
             </p>
             <h2
               style={{
-                fontSize: "clamp(2rem, 4vw, 3rem)",
+                fontSize: "clamp(1.9rem, 4vw, 3rem)",
                 fontWeight: 800,
                 color: t.text,
-                lineHeight: 1.1,
+                lineHeight: 1.15,
                 margin: "0 0 24px",
                 letterSpacing: "-1px",
                 fontFamily: "'Playfair Display', serif",
               }}
             >
-              Digital experiences and visual designs that speak for your brand.
+              Visual designs that speak for your brand.
             </h2>
             <p
               style={{
@@ -79,7 +80,9 @@ export function About() {
                 marginBottom: 20,
               }}
             >
-              I am a passionate UI/UX and graphic designer dedicated to crafting intuitive user interfaces and powerful visual identities. Every project is crafted with a deep focus on user experience, color, composition, and messaging. From seamless app layouts to striking brand graphics, I help businesses stand out with products that are both beautiful to look at and effortless to use.
+              I'm a passionate graphic designer dedicated to crafting powerful
+              visual identities, advertising graphics, and print media. Every design
+              is crafted with care for color, composition, and message.
             </p>
             <p
               style={{
@@ -102,7 +105,7 @@ export function About() {
                   background: t.surface,
                   border: `1px solid ${t.border}`,
                   borderRadius: 14,
-                  padding: "24px",
+                  padding: "22px",
                   transition: "all 0.2s",
                 }}
                 onMouseEnter={(e) => {
@@ -134,4 +137,3 @@ export function About() {
     </section>
   );
 }
-

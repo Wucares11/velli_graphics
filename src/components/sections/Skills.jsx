@@ -7,15 +7,15 @@ export function Skills() {
   return (
     <section
       id="skills"
+      className="section-padding"
       style={{
         width: "100%",
         boxSizing: "border-box",
         scrollMarginTop: "80px",
         background: t.bg,
-        padding: "100px 2rem",
       }}
     >
-      <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+      <div style={{ maxWidth: 1200, margin: "0 auto", width: "100%" }}>
         <p
           style={{
             color: t.accent,
@@ -29,10 +29,10 @@ export function Skills() {
         </p>
         <h2
           style={{
-            fontSize: "clamp(2rem, 4vw, 3rem)",
+            fontSize: "clamp(1.9rem, 4vw, 3rem)",
             fontWeight: 800,
             color: t.text,
-            lineHeight: 1.1,
+            lineHeight: 1.15,
             margin: "0 0 56px",
             letterSpacing: "-1px",
             fontFamily: "'Playfair Display', serif",
@@ -48,7 +48,7 @@ export function Skills() {
                 background: t.surface,
                 border: `1px solid ${t.border}`,
                 borderRadius: 18,
-                padding: "32px",
+                padding: "28px",
                 transition: "all 0.2s",
               }}
               onMouseEnter={(e) => {
@@ -65,7 +65,7 @@ export function Skills() {
                   display: "flex",
                   alignItems: "center",
                   gap: 12,
-                  marginBottom: 24,
+                  marginBottom: 20,
                 }}
               >
                 <SkillIcon size={22} color={t.accent} strokeWidth={1.8} />
@@ -120,4 +120,3 @@ export function Skills() {
     </section>
   );
 }
-

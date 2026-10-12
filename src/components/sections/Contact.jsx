@@ -62,12 +62,12 @@ export function Contact() {
   return (
     <section
       id="contact"
+      className="section-padding"
       style={{
         width: "100%",
         boxSizing: "border-box",
         scrollMarginTop: "80px",
         background: t.bg,
-        padding: "100px 2rem",
       }}
     >
       <div style={{ maxWidth: 640, margin: "0 auto", textAlign: "center" }}>

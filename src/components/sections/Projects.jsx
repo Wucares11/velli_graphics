@@ -8,15 +8,15 @@ export function Projects() {
   return (
     <section
       id="projects"
+      className="section-padding"
       style={{
         width: "100%",
         boxSizing: "border-box",
         scrollMarginTop: "80px",
         background: t.bgAlt,
-        padding: "100px 2rem",
       }}
     >
-      <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+      <div style={{ maxWidth: 1200, margin: "0 auto", width: "100%" }}>
         <p
           style={{
             color: t.accent,
@@ -30,10 +30,10 @@ export function Projects() {
         </p>
         <h2
           style={{
-            fontSize: "clamp(2rem, 4vw, 3rem)",
+            fontSize: "clamp(1.9rem, 4vw, 3rem)",
             fontWeight: 800,
             color: t.text,
-            lineHeight: 1.1,
+            lineHeight: 1.15,
             margin: "0 0 56px",
             letterSpacing: "-1px",
             fontFamily: "'Playfair Display', serif",
@@ -54,6 +54,7 @@ export function Projects() {
                 display: "flex",
                 flexDirection: "column",
                 boxShadow: t.cardShadow,
+                width: "100%",
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.borderColor = t.accentBorder;
@@ -66,17 +67,16 @@ export function Projects() {
                 e.currentTarget.style.boxShadow = t.cardShadow;
               }}
             >
-              {/* Media Container: Supports both Video and Image */}
+              {/* Media Container: Responsive height using CSS class */}
               <div
+                className="project-media-container"
                 style={{
-                  width: "100%",
-                  height: 360,
                   background: t.cardImageBg,
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
                   overflow: "hidden",
-                  padding: 16,
+                  padding: 14,
                   boxSizing: "border-box",
                   position: "relative",
                 }}
@@ -88,7 +88,7 @@ export function Projects() {
                       position: "absolute",
                       top: 12,
                       left: 12,
-                      background: "rgba(0,0,0,0.65)",
+                      background: "rgba(0,0,0,0.7)",
                       backdropFilter: "blur(8px)",
                       WebkitBackdropFilter: "blur(8px)",
                       color: t.accent,
@@ -139,27 +139,27 @@ export function Projects() {
                         background: `radial-gradient(circle, ${t.accentBg} 0%, transparent 80%)`,
                         border: `1px dashed ${t.accentBorder}`,
                         borderRadius: 12,
-                        padding: "20px",
+                        padding: "16px",
                         textAlign: "center",
                         boxSizing: "border-box",
                       }}
                     >
                       <div
                         style={{
-                          width: 58,
-                          height: 58,
+                          width: 52,
+                          height: 52,
                           borderRadius: "50%",
                           background: t.accentBg,
                           border: `2px solid ${t.accent}`,
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "center",
-                          marginBottom: 14,
+                          marginBottom: 12,
                           boxShadow: `0 0 20px ${t.accent}30`,
                         }}
                       >
                         <Play
-                          size={26}
+                          size={24}
                           color={t.accent}
                           fill={t.accent}
                           style={{ marginLeft: 3 }}
@@ -218,7 +218,7 @@ export function Projects() {
               {/* Project info */}
               <div
                 style={{
-                  padding: "24px",
+                  padding: "22px",
                   flexGrow: 1,
                   display: "flex",
                   flexDirection: "column",
@@ -232,6 +232,7 @@ export function Projects() {
                       justifyContent: "space-between",
                       alignItems: "flex-start",
                       marginBottom: 12,
+                      gap: 8,
                     }}
                   >
                     <h3
@@ -253,7 +254,6 @@ export function Projects() {
                         textDecoration: "none",
                         transition: "color 0.2s",
                         flexShrink: 0,
-                        marginLeft: 8,
                       }}
                       onMouseEnter={(e) =>
                         (e.currentTarget.style.color = t.accent)
