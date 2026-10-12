@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+body {
 html, body {
   margin: 0;
   padding: 0;
@@ -15,9 +16,11 @@ html, body {
   width: 100%;
   max-width: 100%;
   margin: 0;
+  min-height: 100svh;
   min-height: 100vh;
 }
 
+/* Responsive overrides */
 /* ─── Responsive Grid & Layout Utility Classes ─── */
 
 .responsive-grid-2 {
@@ -63,6 +66,9 @@ html, body {
 
 /* ─── Mobile Breakpoint (max-width: 768px) ─── */
 @media (max-width: 768px) {
+  /* Make grids stack on mobile */
+  section > div > div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
   .responsive-grid-2 {
     grid-template-columns: 1fr;
     gap: 40px;
